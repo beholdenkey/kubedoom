@@ -2,13 +2,12 @@
 
 ## 1.0.0 (2024-04-21)
 
-
 ### Features
 
-* add workflow ([0244b43](https://github.com/beholdenkey/kubedoom/commit/0244b4326f9324c3bd91efa648344fdf93140c87))
-* optimize project ([#1](https://github.com/beholdenkey/kubedoom/issues/1)) ([82969ba](https://github.com/beholdenkey/kubedoom/commit/82969ba4c2b0e2695814225b660a2b333acd1477))
-* update workflow ([0deed0b](https://github.com/beholdenkey/kubedoom/commit/0deed0b0fa35da84d96c7d2d521231a8e2f39168))
-* update workflows ([#2](https://github.com/beholdenkey/kubedoom/issues/2)) ([133e4ba](https://github.com/beholdenkey/kubedoom/commit/133e4bacdb5cbfb33887235ed36c8ede66a892f5))
+- add workflow ([0244b43](https://github.com/beholdenkey/kubedoom/commit/0244b4326f9324c3bd91efa648344fdf93140c87))
+- optimize project ([#1](https://github.com/beholdenkey/kubedoom/issues/1)) ([82969ba](https://github.com/beholdenkey/kubedoom/commit/82969ba4c2b0e2695814225b660a2b333acd1477))
+- update workflow ([0deed0b](https://github.com/beholdenkey/kubedoom/commit/0deed0b0fa35da84d96c7d2d521231a8e2f39168))
+- update workflows ([#2](https://github.com/beholdenkey/kubedoom/issues/2)) ([133e4ba](https://github.com/beholdenkey/kubedoom/commit/133e4bacdb5cbfb33887235ed36c8ede66a892f5))
 
 ## 0.6.0
 
