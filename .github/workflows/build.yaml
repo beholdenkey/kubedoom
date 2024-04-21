@@ -62,7 +62,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - uses: docker/bake-action@v4
         with:
-          files: ./docker-bake.hcl
+          # files: ./docker-bake.hcl
           targets: image
           set: |
             *.platform=${{ env.PLATFORMS }}
