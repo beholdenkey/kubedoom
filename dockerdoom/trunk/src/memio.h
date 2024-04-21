@@ -42,4 +42,3 @@ long mem_ftell(MEMFILE *stream);
 int mem_fseek(MEMFILE *stream, signed long offset, mem_rel_t whence);
 
 #endif /* #ifndef MEMIO_H */
-
