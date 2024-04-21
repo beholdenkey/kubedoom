@@ -1,4 +1,4 @@
-// Emacs style mode select   -*- C++ -*-
+// Emacs style mode select   -*- C++ -*- 
 //-----------------------------------------------------------------------------
 //
 // Copyright(C) 2009 Simon Howard
@@ -134,3 +134,4 @@ void OPL_Delay(unsigned int ms);
 void OPL_SetPaused(int paused);
 
 #endif
+

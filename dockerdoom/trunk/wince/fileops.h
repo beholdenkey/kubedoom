@@ -11,3 +11,4 @@ int remove(const char *pathname);
 int rename(const char *oldpath, const char *newpath);
 
 #endif /* #ifndef WINCE_FILEOPS_H */
+

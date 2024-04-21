@@ -1,4 +1,4 @@
-// Emacs style mode select   -*- C++ -*-
+// Emacs style mode select   -*- C++ -*- 
 //-----------------------------------------------------------------------------
 //
 // Copyright(C) 2006 Simon Howard
@@ -77,3 +77,5 @@ txt_button_t *TXT_NewButton2(char *label, TxtWidgetSignalFunc func,
 void TXT_SetButtonLabel(txt_button_t *button, char *label);
 
 #endif /* #ifndef TXT_BUTTON_H */
+
+

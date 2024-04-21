@@ -42,3 +42,4 @@ void MD5_Final(unsigned char digest[16], md5_context_t *context);
 void MD5_Transform(uint32_t buf[4], uint32_t const in[16]);
 
 #endif /* !MD5_H */
+

@@ -17,3 +17,4 @@ int *_GetErrno()
     my_errno = GetLastError();
     return &my_errno;
 }
+

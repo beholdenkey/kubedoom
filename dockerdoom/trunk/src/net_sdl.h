@@ -1,4 +1,4 @@
-// Emacs style mode select   -*- C++ -*-
+// Emacs style mode select   -*- C++ -*- 
 //-----------------------------------------------------------------------------
 //
 // Copyright(C) 2005 Simon Howard
@@ -31,3 +31,4 @@
 extern net_module_t net_sdl_module;
 
 #endif /* #ifndef NET_SDL_H */
+

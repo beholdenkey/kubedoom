@@ -1,4 +1,4 @@
-// Emacs style mode select   -*- C++ -*-
+// Emacs style mode select   -*- C++ -*- 
 //-----------------------------------------------------------------------------
 //
 // Copyright(C) 2009 Simon Howard
@@ -107,3 +107,4 @@ opl_driver_t opl_linux_driver =
 };
 
 #endif /* #ifdef HAVE_IOPERM */
+

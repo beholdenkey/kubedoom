@@ -8,3 +8,4 @@ guitest_SOURCES = guitest.c
 
 calculator_LDADD = ../libtextscreen.a @LDFLAGS@ @SDL_LIBS@
 calculator_SOURCES = calculator.c
+

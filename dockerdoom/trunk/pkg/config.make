@@ -26,3 +26,4 @@ DOC_FILES = README       \
             NOT-BUGS     \
             CMDLINE      \
             TODO
+
