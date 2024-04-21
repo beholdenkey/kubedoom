@@ -4,15 +4,23 @@ target "_common" {
   }
 }
 
-group "default" {
-  targets = ["image-local"]
+target "base" {
+  inherits = ["_common"]
+  target = "base"
+  output = ["type=cacheonly"]
 }
 
 target "image" {
-  inherits = ["_common", "docker-metadata-action"]
+  inherits = ["_common"]
+  dockerfile = "Dockerfile"
+  target = "final-stage"
+  output = ["type=docker, push=false"]
 }
 
 target "image-local" {
   inherits = ["image"]
-  output = ["type=docker"]
+}
+
+group "default" {
+  targets = ["image"]
 }
