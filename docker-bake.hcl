@@ -4,7 +4,6 @@ target "_common" {
   }
 }
 
-
 target "base" {
   inherits = ["_common"]
   target = "build-essentials"
@@ -15,11 +14,13 @@ target "image" {
   inherits = ["_common"]
   dockerfile = "Dockerfile"
   target = "final"
-  output = ["type=docker, push=false"]
+  platforms = ["linux/amd64", "linux/arm64"]
+  output = ["type=docker, push=true"]
 }
 
 target "image-local" {
   inherits = ["image"]
+  output = ["type=docker, push=false"]
 }
 
 group "default" {
