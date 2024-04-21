@@ -4,16 +4,17 @@ target "_common" {
   }
 }
 
+
 target "base" {
   inherits = ["_common"]
-  target = "base"
+  target = "build-essentials"
   output = ["type=cacheonly"]
 }
 
 target "image" {
   inherits = ["_common"]
   dockerfile = "Dockerfile"
-  target = "final-stage"
+  target = "final"
   output = ["type=docker, push=false"]
 }
 
