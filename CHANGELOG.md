@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.0](https://github.com/beholdenkey/kubedoom/compare/v1.2.0...v1.3.0) (2024-04-22)
+
+
+### Features
+
+* bump version ([a3e8666](https://github.com/beholdenkey/kubedoom/commit/a3e8666f2470f49f104cae4da1e6d6062d4849a8))
+* update workflow ([81a1292](https://github.com/beholdenkey/kubedoom/commit/81a12921a839a0d51d92cfbce34d21eeec128ecc))
+
 ## [1.2.0](https://github.com/beholdenkey/kubedoom/compare/v1.1.0...v1.2.0) (2024-04-22)
 
 
