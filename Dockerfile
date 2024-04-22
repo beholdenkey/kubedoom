@@ -1,4 +1,4 @@
-FROM golang:1.17-alpine AS build-kubedoom
+FROM cgr.dev/chainguard/go:latest AS build-kubedoom
 WORKDIR /go/src/kubedoom
 COPY go.mod .
 COPY kubedoom.go .
