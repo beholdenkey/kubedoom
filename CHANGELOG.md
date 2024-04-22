@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.0](https://github.com/beholdenkey/kubedoom/compare/v1.3.0...v1.4.0) (2024-04-22)
+
+
+### Features
+
+* switch to chainguard go ([#16](https://github.com/beholdenkey/kubedoom/issues/16)) ([9e8e1a9](https://github.com/beholdenkey/kubedoom/commit/9e8e1a9759ebd0b6d0bc9cb6bb36816287435765))
+* update code ([6824e01](https://github.com/beholdenkey/kubedoom/commit/6824e013e8f88fd93968c838cb6c2c3cb11b8296))
+
 ## [1.3.0](https://github.com/beholdenkey/kubedoom/compare/v1.2.0...v1.3.0) (2024-04-22)
 
 
