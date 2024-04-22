@@ -21,27 +21,27 @@ In order to run locally you will need to
 
 ### With Docker
 
-Run `ghcr.io/storax/kubedoom:latest` with docker locally:
+Run `ghcr.io/beholdenkey/kubedoom:latest` with docker locally:
 
 ```console
-$ docker run -p5901:5900 \
+docker run -p5901:5900 \
   --net=host \
   -v ~/.kube:/root/.kube \
   --rm -it --name kubedoom \
-  ghcr.io/storax/kubedoom:latest
+  ghcr.io/beholdenkey/kubedoom:latest
 ```
 
 Optionally, if you set `-e NAMESPACE={your namespace}` you can limit Kubedoom to deleting pods in a single namespace
 
 ### With Podman
 
-Run `ghcr.io/storax/kubedoom:latest` with podman locally:
+Run `ghcr.io/beholdenkey/kubedoom:latest` with podman locally:
 
 ```console
-$ podman run -it -p5901:5900/tcp \
+podman run -it -p5901:5900/tcp \
   -v ~/.kube:/tmp/.kube --security-opt label=disable \
   --env "KUBECONFIG=/tmp/.kube/config" --name kubedoom
-  ghcr.io/storax/kubedoom:latest
+  ghcr.io/beholdenkey/kubedoom:latest
 ```
 
 ### Attaching a VNC Client
@@ -60,16 +60,16 @@ Pause the game with `ESC`.
 
 ### Killing namespaces
 
-Kubedoom now also supports killing namespaces [in case you have too many of
-them](https://github.com/storax/kubedoom/issues/5). Simply set the `-mode` flag
+Kubedoom now also supports killing namespaces in case you have too many of
+them. Simply set the `-mode` flag
 to `namespaces`:
 
 ```console
-$ docker run -p5901:5900 \
+docker run -p5901:5900 \
   --net=host \
   -v ~/.kube:/root/.kube \
   --rm -it --name kubedoom \
-  ghcr.io/storax/kubedoom:latest \
+  ghcr.io/beholdenkey/kubedoom:latest \
   -mode namespaces
 ```
 
@@ -102,7 +102,7 @@ the worker node. Then run kubedoom inside the cluster by applying the manifest
 provided in this repository:
 
 ```console
-$ kubectl apply -k manifest/
+kubectl apply -k manifest/
 namespace/kubedoom created
 deployment.apps/kubedoom created
 serviceaccount/kubedoom created
