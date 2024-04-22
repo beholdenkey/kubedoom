@@ -1,4 +1,3 @@
----
 name: tag-push
 
 on:
@@ -31,6 +30,10 @@ jobs:
           tags: |
             type=ref,event=tag
             type=raw,value=latest
+          labels: |
+            org.opencontainers.image.source=${{ github.event.repository.html_url }}
+            org.opencontainers.image.revision=${{ github.sha }}
+            org.opencontainers.image.created=${{ steps.meta.outputs.date }}
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
@@ -51,25 +54,20 @@ jobs:
         with:
           context: .
           platforms: ${{ matrix.platform }}
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          outputs: type=image,name=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }},push-by-digest=true,name-canonical=true,push=true
-          no-cache: true
+          outputs: type=docker,dest=/tmp/docker-image.tar
 
       - name: Export digest
-        id: export-digest
         run: |
-          mkdir -p /tmp/digests
-          digest="${{ steps.build.outputs.digest }}"
-          touch "/tmp/digests/${digest#sha256:}"
-          echo "digest=${digest#sha256:}" >> "$GITHUB_OUTPUT"
+          echo "Digest from build step: ${{ steps.build.outputs.digest }}"
 
       - name: Upload digest
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v2
         with:
-          name: digest-${{ steps.export-digest.outputs.digest }}
-          path: /tmp/digests/*
-          if-no-files-found: error
-          retention-days: 1
+          name: docker-image
+          path: /tmp/docker-image.tar
 
   merge:
     runs-on: ubuntu-latest
@@ -79,21 +77,10 @@ jobs:
       - name: Download digests
         uses: actions/download-artifact@v4
         with:
-          path: /tmp/digests
-          pattern: digest-*
-          merge-multiple: true
+          path: /tmp
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
-
-      - name: Extract metadata (tags, labels) for Docker
-        id: meta
-        uses: docker/metadata-action@v5
-        with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-          tags: |
-            type=ref,event=tag
-            type=raw,value=latest
 
       - name: Log in to the Container registry
         uses: docker/login-action@v3
@@ -103,7 +90,6 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create manifest list and push
-        working-directory: /tmp/digests
         run: |
           docker buildx imagetools create $(jq -cr '.tags | map("-t " + .) | join(" ")' <<< "$DOCKER_METADATA_OUTPUT_JSON") \
             $(printf '${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}@sha256:%s ')
