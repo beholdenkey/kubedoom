@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/beholdenkey/kubedoom/compare/v1.1.0...v1.2.0) (2024-04-22)
+
+
+### Features
+
+* update deployment.yaml ([#12](https://github.com/beholdenkey/kubedoom/issues/12)) ([055b968](https://github.com/beholdenkey/kubedoom/commit/055b9685976fc9a9cd3f5beb4fa4860a9b54343e))
+
 ## [1.1.0](https://github.com/beholdenkey/kubedoom/compare/v1.0.0...v1.1.0) (2024-04-22)
 
 ### Features
