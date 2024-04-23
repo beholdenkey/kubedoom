@@ -28,7 +28,7 @@ docker run -p5901:5900 \
   --net=host \
   -v ~/.kube:/root/.kube \
   --rm -it --name kubedoom \
-  ghcr.io/beholdenkey/kubedoom:latest
+  ghcr.io/beholdenkey/kubedoom/kubedoom:v1.4.0
 ```
 
 Optionally, if you set `-e NAMESPACE={your namespace}` you can limit Kubedoom to deleting pods in a single namespace
@@ -41,7 +41,7 @@ Run `ghcr.io/beholdenkey/kubedoom:latest` with podman locally:
 podman run -it -p5901:5900/tcp \
   -v ~/.kube:/tmp/.kube --security-opt label=disable \
   --env "KUBECONFIG=/tmp/.kube/config" --name kubedoom
-  ghcr.io/beholdenkey/kubedoom:latest
+  ghcr.io/beholdenkey/kubedoom/kubedoom:v1.4.0
 ```
 
 ### Attaching a VNC Client
@@ -69,7 +69,7 @@ docker run -p5901:5900 \
   --net=host \
   -v ~/.kube:/root/.kube \
   --rm -it --name kubedoom \
-  ghcr.io/beholdenkey/kubedoom:latest \
+  ghcr.io/beholdenkey/kubedoom/kubedoom:v1.4.0 \
   -mode namespaces
 ```
 
