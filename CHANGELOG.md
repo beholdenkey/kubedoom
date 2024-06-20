@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.1](https://github.com/beholdenkey/kubedoom/compare/v1.4.0...v1.4.1) (2024-06-20)
+
+
+### Miscellaneous
+
+* **deps:** bump actions/upload-artifact from 2 to 4 ([#17](https://github.com/beholdenkey/kubedoom/issues/17)) ([ae2710a](https://github.com/beholdenkey/kubedoom/commit/ae2710af5c33ddc952eda9c9a17bf7ebfa57a2ea))
+* **deps:** bump docker/build-push-action from 5 to 6 ([#18](https://github.com/beholdenkey/kubedoom/issues/18)) ([5559dbd](https://github.com/beholdenkey/kubedoom/commit/5559dbd2648c0f6af1b6c3c995d90cfe613c0549))
+
 ## [1.4.0](https://github.com/beholdenkey/kubedoom/compare/v1.3.0...v1.4.0) (2024-04-22)
 
 
